@@ -1,0 +1,38 @@
+html{
+    background-color: #51689e;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(141deg, #51689e 5%, #9b1b1b 41%, #304c8c 80%);
+}
+
+body{
+    font-family: 'Rubik', sans-serif;
+}
+
+#libraryTitle{
+    font-size: 2.8em;
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
+    font-family: 'Rubik', cursive;
+    margin: 0;
+    padding: 0.5em;
+    color: white;
+    background-color: rgba(48, 76, 140, 0.83);
+}
+
+#container{
+    width: 60vh;
+    height: 80vh;
+    display: flex;
+    flex-flow: column;
+    background-color: white;
+    margin: auto;
+    margin-top: 3vh;
+}
+
+.containerRow{
+    flex-grow: 1;
+    display: flex;
+    flex-flow: row;
+}

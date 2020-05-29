@@ -38,7 +38,7 @@ body{
     text-align: center;
     background-color: white;
     width: 20vw;
-    max-width: 46.5vw;
+    max-width: 35vw;
     height: 20vw;
     margin: 1vw;
     border-radius: 1vw;
@@ -50,7 +50,6 @@ body{
     margin: 1vw;
     padding: 0;
     overflow-wrap: break-word;
-    text-decoration: underline;
 }
 
 .author{
@@ -74,13 +73,20 @@ body{
     height: 1.7vw;
     width: 1.7vw;
     margin: auto;
-    margin-left: 1vw;
+    margin-left: 0.5vw;
 }
 
 .isReadLabel{
     margin: auto;
     margin-right: 0;
     font-size: 1.4vw;
+}
+
+.delete{
+    font-size: 2vw;
+    margin-right: 14px;
+    margin-bottom: 14px;
+    text-align: right;
 }
 
 #centered{
@@ -170,11 +176,11 @@ legend{
     align-self: center;
 }
 
-.fa-trash-alt{
-    color: rgb(83, 13, 13);
-    font-size: 3vw;
+.fa-trash{
+    color: rgb(114, 114, 114);
 }
 
-.fa-trash-alt:hover{
-    color: rgb(161, 26, 26);
+.fa-trash:hover{
+    color: rgb(87, 87, 87);
+    transform: scale(1.1);
 }

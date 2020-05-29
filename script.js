@@ -1,7 +1,7 @@
 let aLibrary = [];
 
 if (window.localStorage.length == 0) {
-    addBookToLibrary(aLibrary, "Harry Potter", "J.K. Rowling", 300);
+    addBookToLibrary(aLibrary, "Harry Potter", "J.K. Rowling", 309);
     addBookToLibrary(aLibrary, "The Fundamentals of Web Development", "Randy Connolly and Ricardo Hoar", 1184);
     addBookToLibrary(aLibrary, "Dune", "Frank Herbert", 384, true);
 
@@ -67,6 +67,18 @@ function render(aLibrary) {
             isRead.setAttribute('checked', "");
         }
 
+        let deleteButton = document.createElement('div');
+        deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
+        deleteButton.classList.add('delete');
+
+        deleteButton.addEventListener('click', function () {
+            aLibrary.splice(i, 1);
+
+            // update local storage
+            window.localStorage.setItem("aLibrary", JSON.stringify(aLibrary));
+            render(aLibrary);
+        });
+
         isReadDiv.appendChild(isReadLabel);
         isReadDiv.appendChild(isRead);
 
@@ -75,6 +87,7 @@ function render(aLibrary) {
         bookInfo.appendChild(numOfPages);
         bookDisplay.appendChild(bookInfo);
         bookDisplay.appendChild(isReadDiv);
+        bookDisplay.appendChild(deleteButton);
 
         container.appendChild(bookDisplay);
 
@@ -86,7 +99,6 @@ function render(aLibrary) {
             } else {
                 aLibrary[i].isRead = true;
             }
-            console.log("running");
 
             // update local storage
             window.localStorage.setItem("aLibrary", JSON.stringify(aLibrary));

@@ -9,14 +9,48 @@
     <link href="styles/stylesheet.css" rel="stylesheet" type="text/css">
 
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/64486ec299.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <div id="popup">
+        <form id="addBookWindow">
+            <legend>Book Info:</legend>
+
+            <label for="bookTitle">Title</label>
+            <input type="text" class="bookData" placeholder="Enter Title" name="bookTitle" required>
+
+            <label for="author">Author</label>
+            <input type="text" class="bookData" placeholder="Enter Name" name="author" required>
+
+            <label for="bookTitle"># of Pages</label>
+            <input type="text" class="bookData"  placeholder="Enter Pages" name="pages" required>
+
+            <legend>Completed reading the book?</legend>
+
+            <div id="isCompletedBook">
+                <label for="finished">Yes</label>
+                <input type="radio" id="finished" class="bookData" name="isRead" value="finished">
+
+                <label for="unfinished">No</label>
+                <input type="radio" id="unfinished" name="isRead" value="unfinished" checked>
+            </div>
+
+            <div id="submitPrompt">
+                <button id="add" type="button">Add</button>
+                <button id="cancel" type="button">Cancel</button>
+            </div>
+        </form>
+    </div>
+
     <h1 id="libraryTitle">Library</h1>
+
+    <div id="centered"><button id="addBook">Add Book</button></div>
 
     <div id="container">
     </div>
-    
+
     <script type="text/javascript" src="script.js"></script>
+</body>
 
 </html>

@@ -18,13 +18,17 @@ body{
     padding: 0.5em;
     color: white;
     background-color: rgba(48, 76, 140, 0.83);
+    box-shadow: 0px 3px 1vw rgb(151, 151, 151);
 }
 
 #container{
     display: flex;
     flex-flow: row wrap;
-    margin: 3vw 1vw 1vw 1vw;
-    position: relative;
+    margin: 0vw 1vw 1vw 1vw;
+}
+
+.bookInfo{
+    height: 80%;
 }
 
 .book{
@@ -33,8 +37,8 @@ body{
     flex-flow: column;
     text-align: center;
     background-color: white;
-    min-width: 20vw;
-    max-width: 30vw;
+    width: 20vw;
+    max-width: 46.5vw;
     height: 20vw;
     margin: 1vw;
     border-radius: 1vw;
@@ -58,23 +62,119 @@ body{
     font-size: 1.3vw;
 }
 
+.isReadDiv{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    text-align: right;
+    height: 25%;
+}
+
 .isRead{
-    width: 2vw;
-    height: 2vw;
+    height: 1.7vw;
+    width: 1.7vw;
     margin: auto;
-    margin-left: 5%;
+    margin-left: 1vw;
 }
 
 .isReadLabel{
+    margin: auto;
     margin-right: 0;
-    font-size: 1.2vw;
+    font-size: 1.4vw;
 }
 
-.isReadDiv{
-    width: 11%;
-    position: absolute;
+#centered{
+    text-align: center;
+}
+
+#addBook{
+    margin: auto;
+    margin-top: 1vw;
+    margin-bottom: 0;
+    padding: 1.3vw 3vw 1.3vw 3vw;
+    font-size: 1.7vw;
+    border-radius: 0.5em;
+    border-style: none;
+    color: white;
+    background-color: rgb(43, 72, 138);
+    box-shadow: 0px 3px 7px rgb(150, 150, 150);
+    outline: none;
+}
+
+#addBook:hover{
+    background-color: rgb(23, 58, 141);
+    transform: scale(1.05);
+    transition: ease-in;
+    transition-duration: 0.05s;
+}
+
+#popup{
+    visibility: hidden;
+    position: fixed;
+    background-color: rgba(14, 29, 28, 0.863);
+    backdrop-filter: blur(2px);
+    height: 100%;
+    width: 100%;
+    padding-top: 3vw;
+}
+
+#addBookWindow{
+    background-color: rgb(85, 116, 187);
+    box-shadow: 0px 3px 5vw rgba(20, 20, 20, 0.753);
+    border-radius: 1em;
+    padding: 2vw;
+    position: fixed;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    width: 60vw;
     display: flex;
-    flex-flow: row wrap;
-    bottom: 2vw;
-    margin-left: 12vw;
+    flex-flow: column wrap;
+    font-size: 1.5vw;
+    z-index: 2;
+}
+
+label{
+    padding-top: 1.5vw;
+    padding-bottom: 0.2vw;
+}
+
+#add, #cancel{
+    padding: 1vw 1.5vw 1vw 1.5vw;
+    margin: 1vw 0.3vw auto 0.3vw;
+    border: none;
+    color: white;
+    background-color: rgb(23, 58, 141);
+    border-radius: 2em;
+    outline: none;
+}
+
+#add:hover, #cancel:hover{
+    background-color: rgb(16, 40, 97);
+    transform: scale(1.05);
+}
+
+#add:active, #cancel:active{
+    background-color: rgb(11, 27, 65);
+    transform: scale(1.05);
+}
+
+#submitPrompt{
+    text-align: center;
+}
+
+legend{
+    padding: 2vw 0vw 1vw 0vw;
+}
+
+#isCompletedBook{
+    align-self: center;
+}
+
+.fa-trash-alt{
+    color: rgb(83, 13, 13);
+    font-size: 3vw;
+}
+
+.fa-trash-alt:hover{
+    color: rgb(161, 26, 26);
 }

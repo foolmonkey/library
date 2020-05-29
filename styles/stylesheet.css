@@ -9,7 +9,7 @@ body{
 }
 
 #libraryTitle{
-    font-size: 2.8em;
+    font-size: 2.8vw;
     font-weight: lighter;
     display: flex;
     justify-content: center;
@@ -24,14 +24,57 @@ body{
     display: flex;
     flex-flow: row wrap;
     margin: 3vw 1vw 1vw 1vw;
+    position: relative;
 }
 
-.containerRow{
+.book{
     flex-grow: 1;
     display: flex;
-    flex-flow: row;
-    background-color: black;
+    flex-flow: column;
+    text-align: center;
+    background-color: white;
     min-width: 20vw;
-    min-height: 30vw;
+    max-width: 30vw;
+    height: 20vw;
     margin: 1vw;
+    border-radius: 1vw;
+    box-shadow: 0px 3px 1vw rgb(170, 170, 170);
+}
+
+.bookTitle{
+    font-size: 1.8vw;
+    margin: 1vw;
+    padding: 0;
+    overflow-wrap: break-word;
+    text-decoration: underline;
+}
+
+.author{
+    margin: 0vw 1vw 0vw 1vw;
+    font-size: 1.5vw;
+}
+
+.numOfPages{
+    font-size: 1.3vw;
+}
+
+.isRead{
+    width: 2vw;
+    height: 2vw;
+    margin: auto;
+    margin-left: 5%;
+}
+
+.isReadLabel{
+    margin-right: 0;
+    font-size: 1.2vw;
+}
+
+.isReadDiv{
+    width: 11%;
+    position: absolute;
+    display: flex;
+    flex-flow: row wrap;
+    bottom: 2vw;
+    margin-left: 12vw;
 }

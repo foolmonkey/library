@@ -1,5 +1,7 @@
 let aLibrary = [];
 
+window.localStorage.clear();
+
 if (window.localStorage.length == 0) {
     addBookToLibrary(aLibrary, "Harry Potter", "J.K. Rowling", 309);
     addBookToLibrary(aLibrary, "The Fundamentals of Web Development", "Randy Connolly and Ricardo Hoar", 1184);
@@ -139,7 +141,7 @@ window.onload = function (e) {
         let itemsFilled = true;
 
         for (let i = 0; i < 3; i++) {
-            if (inputFields[i].value == ' ') {
+            if (inputFields[i].value.trim() == '') {
                 itemsFilled = false;
             }
         }

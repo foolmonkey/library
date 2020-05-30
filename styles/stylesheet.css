@@ -114,6 +114,15 @@ body{
     transition-duration: 0.05s;
 }
 
+legend{
+    padding: 2vw 0vw 0vw 0vw;
+    font-size: 2.2vw;
+}
+
+#addBookTitle{
+    font-size: 3vw;
+}
+
 #popup{
     visibility: hidden;
     position: fixed;
@@ -142,11 +151,35 @@ body{
 label{
     padding-top: 1.5vw;
     padding-bottom: 0.2vw;
+    font-size: 2vw;
+}
+
+input{
+    height: 4vw;
+    font-size: 2.2vw;
+}
+
+#isCompletedBook{
+    padding: 0;
+    margin: 0 0 2vw 0;
+}
+
+#isCompletedBook label{
+    padding: 0;
+    margin: 1vw 0 0 0;
+}
+
+#isCompletedBook input{
+    padding: 0;
+    margin: 1vw 0 0 0;
+    margin-right: 15px;
+    height: 2vw;
 }
 
 #add, #cancel{
-    padding: 1vw 1.5vw 1vw 1.5vw;
-    margin: 1vw 0.3vw auto 0.3vw;
+    padding: 1.8vw 2.5vw 1.8vw 2.5vw;
+    margin: 0vw 0.5vw auto 0.5vw;
+    font-size: 2vw;
     border: none;
     color: white;
     background-color: rgb(23, 58, 141);
@@ -166,10 +199,6 @@ label{
 
 #submitPrompt{
     text-align: center;
-}
-
-legend{
-    padding: 2vw 0vw 1vw 0vw;
 }
 
 #isCompletedBook{

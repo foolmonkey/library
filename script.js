@@ -1,7 +1,5 @@
 let aLibrary = [];
 
-window.localStorage.clear();
-
 if (window.localStorage.length == 0) {
     addBookToLibrary(aLibrary, "Harry Potter", "J.K. Rowling", 309);
     addBookToLibrary(aLibrary, "The Fundamentals of Web Development", "Randy Connolly and Ricardo Hoar", 1184);
